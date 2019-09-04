@@ -6,8 +6,8 @@ import timeit
 
 import cloudpickle
 
-from hyperopt import base, fmin, Trials
-from hyperopt.utils import coarse_utcnow, _get_logger, _get_random_id
+from . import base, fmin, Trials
+from .utils import coarse_utcnow, _get_logger, _get_random_id
 from pyspark.sql import SparkSession
 
 
