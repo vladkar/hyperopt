@@ -151,7 +151,7 @@ class SparkTrials(Trials):
     def trial_attachments(self, trial):
         raise NotImplementedError("SparkTrials does not support trial attachments.")
 
-    def fmin(self, fn, space, algo, max_evals,
+    def fmin(self, fn, space, algo, max_evals, max_time,
              max_queue_len,
              rstate,
              verbose,
