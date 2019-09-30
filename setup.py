@@ -110,6 +110,7 @@ if package_name is None:
 if package_data is None:
     package_data = find_package_data(packages)
 
+package_name = 'hyperopt-libaml'
 
 setuptools.setup(
     name=package_name,
