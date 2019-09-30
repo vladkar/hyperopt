@@ -37,6 +37,9 @@ from . import mix
 from . import anneal
 
 # -- spark extension
-from .spark import SparkTrials
+try:
+    from .spark import SparkTrials
+except ImportError:
+    pass
 
 __version__ = '0.2'
