@@ -188,7 +188,11 @@ def use_obj_for_literal_in_memo(expr, obj, lit, memo):
     """
     for node in pyll.dfs(expr):
         try:
-            if node.obj == lit:
+            # Modification for pandas dataframe as a parameter
+            import pandas as pd
+            if type(node.obj) == pd.DataFrame:
+                memo[node] = node.obj
+            elif node.obj == lit:
                 memo[node] = obj
         except AttributeError:
             # -- non-literal nodes don't have node.obj
